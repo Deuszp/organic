@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;900&family=Open+Sans&family=PT+Sans&family=Secular+One&display=swap');
+
+body{
+    font-family: 'PT Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.container{
+    max-width: 1920px;
+    margin: 0 auto;
+}
+                    /* HEADER */
+
+.header {
+display: grid;
+grid-template: "logo nav search" max-content / 1fr 1fr 100px;
+
+align-items: center;
+justify-items: start;
+padding: 20px 0;
+
+text-transform: uppercase;
+overflow: hidden;
+}
+
+
+.logo {
+    grid-area: logo;
+    justify-self: end;
+
+    font-family: 'Secular One', sans-serif;
+    font-weight: 400;
+    color: #CC3939;
+    font-size: 24px;
+    width: 150px;
+    line-height: 1;
+    
+}
+
+.header__nav {
+    grid-area: nav;
+}
+.header__nav ul{
+    display: flex;
+    gap: 10px;
+}
+
+.header__nav a{
+    padding: 15px;
+    transition: 0.2s;
+   position: relative;
+   display: inline-block;
+
+}
+
+.header__nav a::after{
+   content: "";
+   display: block;
+   width: 100%;
+   height: 100%;
+   background-color: #019691;
+   position: absolute;
+   left: 15px;
+   bottom: -200%;
+
+   transition: bottom 0.5s, background-color 0.2s;
+}
+
+.header__nav a:hover, .logo:hover{
+    color: #019691;
+}
+.header__nav a:hover::after{
+    bottom: -80%;
+}
+
+.header__nav a:active::after{
+    background-color: #09837f;
+}
+
+.header__nav a:active{
+    color: #09837f;
+}
+
+.header__search {
+    grid-area: search;
+    transition: 0.2s;
+}
+
+.search__icon:hover{
+    fill: #019691;
+}
+
+.search__icon:active{
+    fill: #09837f;
+}
+.d{
+    color: #9DBA56 #CC3939  #CC913A #019691
+}
